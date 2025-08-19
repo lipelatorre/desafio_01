@@ -6,25 +6,27 @@
 
 ## Como executar
 
-# 1 - Inicie o Terraform
+# 1 - Ir na basta do projeto
+
+# 2 - Inicie o Terraform
 terraform init
 
-# 2 - Validação do código
+# 3 - Validação do código
 terraform validate
 
-# 3 - Formular a execução -> Inserir variáveis (sem criar ainda)
-terraform plan -var="ssh_ip_range=200.200.200.0/24" -var="aws_region=us-east-1"
+# 4 - Formular a execução
+terraform plan
 
-# 4 - Criar a infraestrutura
-terraform apply -auto-approve -var="ssh_ip_range=200.200.200.0/24" -var="aws_region=us-east-1"
+# 5 - Criar a infraestrutura
+terraform apply -auto-approve
 
-# 5 - Ver IP público
+# 6 - Ver IP público
 terraform output
 
 
 # Limpando o lab
 
-terraform destroy -auto-approve -var="ssh_ip_range=200.200.200.0/24" -var="aws_region=us-east-1"
+terraform destroy -auto-approve
 
 
 ## Estrutura do projeto
