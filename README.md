@@ -15,10 +15,10 @@ terraform init
 terraform validate
 
 # 4 - Formular a execução
-terraform plan
+terraform plan -var="ssh_cidr=RANGE_IP/32" -var="region=regiao_AWS" # Por exemplo: terraform plan -var="ssh_cidr=200.200.200.250/32" -var="region=us-east-1"
 
 # 5 - Criar a infraestrutura
-terraform apply -auto-approve
+terraform apply -auto-approve -var="ssh_cidr=RANGE_IP/32" -var="region=regiao_AWS" # Por exemplo: terraform apply -auto-approve -var="ssh_cidr=200.200.200.250/32" -var="region=us-east-1"
 
 # 6 - Ver IP público
 terraform output
