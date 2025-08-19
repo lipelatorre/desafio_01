@@ -16,7 +16,7 @@ terraform validate
 terraform plan -var="ssh_ip_range=SEU_IP/32" -var="aws_region=us-east-1"
 
 # 4 - Criar a infraestrutura
-terraform apply -auto-approve -var="ssh_ip_range=SEU_IP/32" -var="aws_region=us-east-1"
+terraform apply -auto-approve -var="ssh_ip_range=200.200.200.0/24" -var="aws_region=us-east-1"
 
 # 5 - Ver IP público
 terraform output
@@ -24,7 +24,7 @@ terraform output
 
 # Limpando o lab
 
-terraform destroy -auto-approve -var="ssh_ip_range=SEU_IP/32" -var="aws_region=us-east-1"
+terraform destroy -auto-approve -var="ssh_ip_range=200.200.200.0/24" -var="aws_region=us-east-1"
 
 
 ## Estrutura do projeto
